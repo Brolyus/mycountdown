@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react'
 
 export default function Home() {
-  const targetDate = '2024-03-28T17:00:00'
+  const targetDate = '2024-08-15T07:00:00'
   const calculateTimeRemaining = () => {
     const now = new Date().getTime()
     const targetTime = new Date(targetDate).getTime()
