@@ -5,8 +5,8 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Libération NAT",
-  description: "Temps restant avant de pouvoir quitter Lesquin",
+  title: "Miss you",
+  description: "Temps restant avant de se retrouver",
 };
 
 export default function RootLayout({
