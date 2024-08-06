@@ -42,20 +42,23 @@ export default function Home() {
   return (
     <main className="flex h-screen w-full items-center justify-center p-24 bg-black">
       <div className="flex flex-col md:flex-row justify-center items-center gap-8 ">
-        <div className="font-thin italic text-orange-500 p-5 rounded-lg text-2xl w-24 h-24 flex items-center justify-center">
-          <p>
-            {toggleElapsed ? timer.daysElapsed : timer.days}</p>
+        <div className="font-thin italic text-orange-500 p-5 rounded-lg text-2xl w-24 h-24 flex items-center justify-center flex-col">
+          <p>{toggleElapsed ? timer.daysElapsed : timer.days}</p>
+          <p className="text-sm">jours</p>
         </div>
-        <div className="font-thin italic text-orange-500 p-5 rounded-lg text-2xl w-24 h-24 flex items-center justify-center">
+        <div className="font-thin italic text-orange-500 p-5 rounded-lg text-2xl w-24 h-24 flex items-center justify-center flex-col">
           <p>{toggleElapsed ? timer.hoursElapsed : timer.hours}</p>
+          <p className="text-sm">heures</p>
         </div>
-        <div className="font-thin italic text-orange-500 p-5 rounded-lg text-2xl w-24 h-24 flex items-center justify-center">
+        <div className="font-thin italic text-orange-500 p-5 rounded-lg text-2xl w-24 h-24 flex items-center justify-center flex-col">
           <p>{toggleElapsed ? timer.minutesElapsed : timer.minutes}</p>
+          <p className="text-sm">minutes</p>
         </div>
-        <div className="font-thin italic text-orange-500 p-5 rounded-lg text-2xl w-24 h-24 flex items-center justify-center">
+        <div className="font-thin italic text-orange-500 p-5 rounded-lg text-2xl w-24 h-24 flex items-center justify-center flex-col">
           <p>{toggleElapsed ? timer.secondsElapsed : timer.seconds}</p>
+          <p className="text-sm">secondes</p>
         </div>
-      <button onClick={() => setToggleElapsed(!toggleElapsed)} className=" bg-orange-500 text-black p-2 rounded-lg">{toggleElapsed ? "Nid d'amour" : "Déjà réalisé" }</button>
+      <button onClick={() => setToggleElapsed(!toggleElapsed)} className=" bg-orange-500 text-black p-2 rounded-lg shadow-md hover:shadow-lg transition duration-300 ease-in-out hover:bg-orange-600">{toggleElapsed ? "Nid d'amour" : "Déjà réalisé" }</button>
       </div>
     </main>
   )
