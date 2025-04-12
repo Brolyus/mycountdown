@@ -2,8 +2,8 @@
 import React, { useState, useEffect } from 'react'
 
 export default function Home() {
-  const targetDate = '2024-08-15T05:00:00'
-  const startingDate = '2024-07-12T09:00:00'
+  const targetDate = '2025-04-12T17:29:00'
+  const startingDate = '2025-04-06T23:59:59'
 
   const calculateTimeRemainingAndElapsed = () => {
     const now = new Date().getTime()
@@ -14,7 +14,7 @@ export default function Home() {
 
     if (timeDifference <= 0) {
       // La date cible est passée
-      return { days: 0, hours: 0, minutes: 0, seconds: 0, daysElapsed: 0, hoursElapsed: 0, minutesElapsed: 0, secondsElapsed: 0}
+      return { days: 0, hours: 0, minutes: 0, seconds: 0, daysElapsed: 0, hoursElapsed: 0, minutesElapsed: 0, secondsElapsed: 0 }
     }
 
     const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24))
@@ -58,7 +58,7 @@ export default function Home() {
           <p>{toggleElapsed ? timer.secondsElapsed : timer.seconds}</p>
           <p className="text-sm">secondes</p>
         </div>
-      <button onClick={() => setToggleElapsed(!toggleElapsed)} className=" bg-orange-500 text-black p-2 rounded-lg shadow-md hover:shadow-lg transition duration-300 ease-in-out hover:bg-orange-600">{toggleElapsed ? "Nid d'amour" : "Déjà réalisé" }</button>
+        <button onClick={() => setToggleElapsed(!toggleElapsed)} className=" bg-orange-500 text-black p-2 rounded-lg shadow-md hover:shadow-lg transition duration-300 ease-in-out hover:bg-orange-600">{toggleElapsed ? "Nid d'amour" : "Déjà réalisé"}</button>
       </div>
     </main>
   )
